@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #070b18;
+  --foreground: #f8fafc;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Space Grotesk", "Sora", sans-serif;
+}
+
+.leaflet-container {
+  background: transparent;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.glass-panel {
+  backdrop-filter: blur(12px);
+  background: linear-gradient(130deg, rgba(15, 23, 42, 0.52), rgba(15, 23, 42, 0.2));
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 16px 40px rgba(2, 6, 23, 0.36);
+}
+
+.map-pulse {
+  animation: pulse-ring 2.25s ease-in-out infinite;
+  will-change: opacity;
+}
+
+.map-halo {
+  animation: halo-glow 3.2s ease-in-out infinite;
+  will-change: opacity;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes pulse-ring {
+  0% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+  }
+  100% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+  }
+}
+
+@keyframes halo-glow {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}

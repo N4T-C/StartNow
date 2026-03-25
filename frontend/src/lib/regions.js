@@ -1,0 +1,16 @@
+export const INDIA_REGIONS = [
+  { id: "maharashtra", name: "Maharashtra", lat: 19.7515, lng: 75.7139 },
+  { id: "karnataka", name: "Karnataka", lat: 15.3173, lng: 75.7139 },
+  { id: "tamil-nadu", name: "Tamil Nadu", lat: 11.1271, lng: 78.6569 },
+  { id: "telangana", name: "Telangana", lat: 18.1124, lng: 79.0193 },
+  { id: "gujarat", name: "Gujarat", lat: 22.2587, lng: 71.1924 },
+  { id: "rajasthan", name: "Rajasthan", lat: 27.0238, lng: 74.2179 },
+  { id: "madhya-pradesh", name: "Madhya Pradesh", lat: 22.9734, lng: 78.6569 },
+  { id: "uttar-pradesh", name: "Uttar Pradesh", lat: 26.8467, lng: 80.9462 },
+  { id: "west-bengal", name: "West Bengal", lat: 22.9868, lng: 87.855 },
+  { id: "bihar", name: "Bihar", lat: 25.0961, lng: 85.3131 },
+  { id: "delhi-ncr", name: "Delhi NCR", lat: 28.6139, lng: 77.209 },
+  { id: "kerala", name: "Kerala", lat: 10.8505, lng: 76.2711 },
+  { id: "assam", name: "Assam", lat: 26.2006, lng: 92.9376 },
+  { id: "odisha", name: "Odisha", lat: 20.9517, lng: 85.0985 },
+];
