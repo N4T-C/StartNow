@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0f;
+  --foreground: #f0f0f0;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f0f0f0;
+}
+
+p, span, div {
+  color: #aaaabb;
+}
+
+.leaflet-container {
+  background: #0a0a0f !important;
+  font-family: 'Inter', sans-serif;
+}
+
+.glass-panel {
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* New Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #333344;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555566;
+}
+
+/* Neon Marker Animations */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.85; }
+}
+
+@keyframes pulseGap {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 16px currentColor; }
+  50% { transform: scale(1.2); box-shadow: 0 0 32px currentColor, 0 0 48px currentColor; }
+}
+
+/* Profit Zone pulsing circle dash animation */
+@keyframes zoneDash {
+  to { stroke-dashoffset: -24; }
+}
+
+/* Rocket marker pulse for Next Shop Predictor */
+@keyframes rocketPulse {
+  0%, 100% { filter: drop-shadow(0 0 10px #00ff88); transform: scale(1); }
+  50%       { filter: drop-shadow(0 0 22px #00ff88) drop-shadow(0 0 40px #00ff8844); transform: scale(1.18); }
+}
+
+/* Competitor popup — dark glass override */
+.competitor-popup .leaflet-popup-content-wrapper {
+  background: rgba(10, 10, 15, 0.96) !important;
+  border: 1px solid rgba(255, 102, 0, 0.25) !important;
+  border-radius: 14px !important;
+  color: #f0f0f0 !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.7), 0 0 24px rgba(255,102,0,0.08) !important;
+  padding: 0 !important;
+  backdrop-filter: blur(12px);
+}
+
+.competitor-popup .leaflet-popup-tip {
+  background: rgba(10, 10, 15, 0.96) !important;
+}
+
+.competitor-popup .leaflet-popup-content {
+  margin: 0 !important;
+  width: auto !important;
+}
+
+/* Profit zone high-profit label */
+.profit-zone-label {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* City label pointer events */
+.leaflet-marker-icon { pointer-events: auto !important; }
